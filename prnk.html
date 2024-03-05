@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-section {
+      margin-bottom: 20px;
+    }
+
+    .login-section h2 {
+      margin: 0 0 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .video-container {
+      display: none;
+    }
+
+    video {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-section">
+      <h2>Name of Institution</h2>
+      <input type="text" id="institution" placeholder="Enter Institution Name">
+    </div>
+    <div class="login-section">
+      <h2>Student Number</h2>
+      <input type="text" id="student-number" placeholder="Enter Student Number">
+    </div>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Video container -->
+  <div class="video-container" id="videoContainer">
+    <video controls>
+      <source src="path/to/your/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    function login() {
+      var institution = document.getElementById("institution").value;
+      var studentNumber = document.getElementById("student-number").value;
+
+      // You can perform validation or further actions here
+      console.log("Institution:", institution);
+      console.log("Student Number:", studentNumber);
+      
+      // Show the video container
+      document.getElementById("videoContainer").style.display = "block";
+    }
+  </script>
+</body>
+</html>
+
